@@ -1,0 +1,10 @@
+---
+layout: main.liquid
+title: Contact
+---
+
+# {{ title }}
+
+You can reach me at <span id="email"><strong>[email protected, enable JavaScript to see it]</strong></span>.
+
+<script>crypto.subtle.importKey("raw",new Uint8Array([99,46,8,165,134,39,244,49,196,138,104,49,114,174,129,17,239,134,115,99,86,10,252,157,47,157,233,163,82,16,50,142]),{name:"AES-CBC"},!!0,["decrypt"]).then(k=>crypto.subtle.decrypt({name:"AES-CBC",iv:new Uint8Array([108,122,210,212,231,79,225,243,56,217,6,0,188,65,113,216])},k,new Uint8Array([229,179,86,201,220,236,212,66,165,180,61,219,86,185,170,91,104,23,170,65,27,121,76,73,242,22,30,177,168,200,165,216]))).then((d)=>(new TextDecoder()).decode(d)).then((e)=>{document.getElementById("email").innerHTML=`<a href='mailto:${e}'>${e}</a>`});</script>
