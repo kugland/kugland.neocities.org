@@ -1,0 +1,70 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    color: white;
+    background-color: #333;
+    a {
+        color: white;
+    }
+}
+
+footer {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+nav > ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+
+    li > a {
+        display: block;
+        padding: 0.5rem 0.5rem;
+        color: white;
+        text-decoration: none;
+        &:hover {
+            background-color: #388;
+        }
+    }
+}
+
+main {
+    flex-grow: 1;
+    margin: 0;
+    padding-top: 1.5rem;
+    --horizontal-padding: calc(max(50vw - 30ch, 1rem));
+    padding-left: var(--horizontal-padding);
+    padding-right: var(--horizontal-padding);
+    p {
+        margin: 0;
+        padding: 0;
+        text-align: justify;
+    }
+    p + p {
+        text-indent: 1.5rem;
+    }
+    margin-bottom: 2rem;
+}
+
+pre {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    background-color: #f8f8f8;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    overflow-x: auto;
+}

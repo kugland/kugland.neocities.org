@@ -1,0 +1,4 @@
+*.map
+*.scss
+*.js
+!*.min.js
