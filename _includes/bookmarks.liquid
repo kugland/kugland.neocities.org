@@ -1,0 +1,28 @@
+{% capture content %}
+
+  {{ content }}
+
+  {%
+    assign bookmarks = bookmarks
+      | sort_natural: "title"
+      | sort_natural: "category"
+      | group_by: "category"
+  %}
+
+  {% for category in bookmarks %}
+    <h2>{{ category.name | xml_escape }}</h2>
+    <ul>
+      {% for bookmark in category.items %}
+        <li>
+          <a href="{{ bookmark.url }}" target="_blank">
+            <h3>{{ bookmark.title | xml_escape }}</h3>
+            <p>{{ bookmark.description | xml_escape }}</p>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
+{% endcapture %}
+
+{% include 'main.liquid' %}

@@ -1,0 +1,22 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <title>
+      {{ title }}
+      | André Kugland’s website
+    </title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body class="page-{{ page.filePathStem | slugify }}">
+    {% include 'header.liquid' %}
+    <main>
+      <h1>{{ title | xml_escape }}</h1>
+      {{ content }}
+    </main>
+    {% include 'footer.liquid' %}
+  </body>
+</html>
